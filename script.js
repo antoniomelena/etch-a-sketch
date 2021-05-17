@@ -35,10 +35,10 @@ function createGrid(col, row){
 
 createGrid(16, 16);
 
-// function getNewGridSize(){
-//    let size = prompt("Enter A New Size For Grid");
-//    return size
-// }
+function getNewGridSize(){
+   let size = prompt("Enter A New Size For Grid");
+   return size
+}
 
 function resetPage(){
    // window.location.reload();
