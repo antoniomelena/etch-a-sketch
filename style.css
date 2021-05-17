@@ -1,9 +1,15 @@
 h1 {
    font-family: Brush Script MT, Brush Script Std, cursive;
+   text-align: center;
 }
 
 .square{
-   background-color: gray;
+   background-color: rgb(255, 255, 255);
+   border: 1px solid black;
+}
+
+.grey{
+   background-color: grey;
    border: 1px solid black;
 }
 
