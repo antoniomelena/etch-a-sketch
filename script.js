@@ -51,15 +51,15 @@ function resetPage(){
 resetButton.addEventListener('click', resetPage);
 greyButton.addEventListener('click', function(){
    const divX = container.querySelectorAll(".square");
-   divX.forEach(div => div.addEventListener('mouseover', function(){
-      div.className = "grey";
+   divX.forEach(div => div.addEventListener('mouseover', () => {
+      div.style.backgroundColor = `rgb(169, 169, 169)`;
    }));
 })
 
 blackButton.addEventListener('click', function(){
    const divX = container.querySelectorAll(".square");
-   divX.forEach(div => div.addEventListener('mouseover', function () {
-      div.className = "black";
+   divX.forEach(div => div.addEventListener('mouseover', () => {
+      div.style.backgroundColor = `rgb(0, 0, 0)`
    }));
 })
 
