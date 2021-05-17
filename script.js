@@ -1,4 +1,5 @@
 let buttonsContainer = document.querySelector('.buttons');
+const container = document.querySelector(".container");
 
 // creating all buttons 
 const resetButton = document.createElement('button');
@@ -21,7 +22,6 @@ const rainbowButtonText = document.createTextNode('Rainbow');
 rainbowButton.appendChild(rainbowButtonText);
 buttonsContainer.appendChild(rainbowButton);
 
-const container = document.getElementById("container");
 
 function createGrid(col, row){
    for (i = 0; i < (col * row); i++){
@@ -35,13 +35,40 @@ function createGrid(col, row){
 
 createGrid(16, 16);
 
+// function getNewGridSize(){
+//    let size = prompt("Enter A New Size For Grid");
+//    return size
+// }
+
 function resetPage(){
-   window.location.reload();
+   // window.location.reload();
+   let div = container.getElementsByTagName(div);
+   container.removeChild(div);
+   let size = getNewGridSize();
+   createGrid(size, size);
 }
 
 resetButton.addEventListener('click', resetPage);
+greyButton.addEventListener('click', function(){
+   const divX = container.querySelectorAll(".square");
+   divX.forEach(div => div.addEventListener('mouseover', function(){
+      div.className = "grey";
+   }));
+})
 
-const divX = container.querySelectorAll(".square");
-divX.forEach(div => div.addEventListener('mouseover', function(){
-   div.classList.add("grey");
-}));
+blackButton.addEventListener('click', function(){
+   const divX = container.querySelectorAll(".square");
+   divX.forEach(div => div.addEventListener('mouseover', function () {
+      div.className = "black";
+   }));
+})
+
+rainbowButton.addEventListener('click', function () {
+   const divX = container.querySelectorAll(".square");
+   divX.forEach(div => div.addEventListener('mouseover', () => {
+      let numberR = Math.floor(Math.random() * 256);
+      let numberG = Math.floor(Math.random() * 256);
+      let numberB = Math.floor(Math.random() * 256);
+      div.style.backgroundColor = `rgb(${numberR}, ${numberG}, ${numberB})`
+   }));
+})
