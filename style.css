@@ -1,6 +1,21 @@
 h1 {
    font-family: Brush Script MT, Brush Script Std, cursive;
    text-align: center;
+   color: goldenrod;
+}
+
+.container {
+   height: 80vh;
+   width: 80vh;
+   border: 10px solid rgb(202, 26, 26);
+   border-radius: 1px;
+   display: grid;
+   margin: auto;
+}
+
+.buttons {
+   margin: auto;
+
 }
 
 .square{
@@ -10,13 +25,10 @@ h1 {
 
 .grey{
    background-color: grey;
-   border: 1px solid black;
+   border:1px solid rgb(0, 0, 0);
 }
 
-#container {
-   height: 500px;
-   width: 500px;
-   border: 2px solid gray;
-   border: 5px;
-   display: grid;
+.black {
+   background-color: black;
+   border:1px solid black;
 }
