@@ -1,5 +1,8 @@
 let buttonsContainer = document.querySelector('.buttons');
-const resetButton = document.createElement('button', 'reset')
+const resetButton = document.createElement('button');
+const buttonText = document.createTextNode('Reset');
+resetButton.appendChild(buttonText);
+document.body.appendChild(resetButton);
 const container = document.getElementById("container");
 
 function createGrid(col, row){
