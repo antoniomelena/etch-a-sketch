@@ -47,12 +47,9 @@ function removeAllChildNodes(parent){
 }
 
 function resetPage(){
-   // window.location.reload();
-   // let div = container.getElementsByTagName(div);
-   // container.removeChild(div);
-   // let size = getNewGridSize();
-   // createGrid(size, size);
    removeAllChildNodes(container);
+   let size = getNewGridSize();
+   createGrid(size, size);
 }
 
 resetButton.addEventListener('click', resetPage);
