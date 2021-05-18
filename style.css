@@ -14,19 +14,20 @@ h1 {
 }
 
 .buttons {
-   margin: auto;
-   display: inline-block;
-   width: 100%;
+   margin: 10px auto;
+   display: flex;
+   width: 16rem;
    text-align: center;
+   justify-content: space-between;
 }
 
 .buttons > * {
-   
+   padding: 5px;
+   border-radius: 5px;
+   cursor: pointer;
 }
-
-.buttons > *:hover
 
 .square{
    background-color: rgb(255, 255, 255);
-   border: 1px solid black;
+   border: 1px solid rgba(50, 50, 50, 0.75);
 }

@@ -3,7 +3,7 @@ const container = document.querySelector(".container");
 
 // creating all buttons 
 const resetButton = document.createElement('button');
-const buttonText = document.createTextNode('Size');
+const buttonText = document.createTextNode('Change Size');
 resetButton.appendChild(buttonText);
 buttonsContainer.appendChild(resetButton);
 
