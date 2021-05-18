@@ -15,8 +15,16 @@ h1 {
 
 .buttons {
    margin: auto;
-
+   display: inline-block;
+   width: 100%;
+   text-align: center;
 }
+
+.buttons > * {
+   
+}
+
+.buttons > *:hover
 
 .square{
    background-color: rgb(255, 255, 255);

@@ -3,7 +3,7 @@ const container = document.querySelector(".container");
 
 // creating all buttons 
 const resetButton = document.createElement('button');
-const buttonText = document.createTextNode('Reset');
+const buttonText = document.createTextNode('Size');
 resetButton.appendChild(buttonText);
 buttonsContainer.appendChild(resetButton);
 
@@ -36,8 +36,12 @@ function createGrid(col, row){
 createGrid(16, 16);
 
 function getNewGridSize(){
-   let size = prompt("Enter A New Size For Grid");
-   return size
+   let size = prompt("Enter A New Size For The Grid (1 - 100)");
+   if (size <= 100 && size > 0) {
+      return size;
+   } else if (size < 1 || size > 100){
+      resetPage();
+   } 
 }
 
 function removeAllChildNodes(parent){
