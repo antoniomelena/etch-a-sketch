@@ -40,15 +40,23 @@ function getNewGridSize(){
    return size
 }
 
+function removeAllChildNodes(parent){
+   while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+   }
+}
+
 function resetPage(){
    // window.location.reload();
-   let div = container.getElementsByTagName(div);
-   container.removeChild(div);
-   let size = getNewGridSize();
-   createGrid(size, size);
+   // let div = container.getElementsByTagName(div);
+   // container.removeChild(div);
+   // let size = getNewGridSize();
+   // createGrid(size, size);
+   removeAllChildNodes(container);
 }
 
 resetButton.addEventListener('click', resetPage);
+
 greyButton.addEventListener('click', function(){
    const divX = container.querySelectorAll(".square");
    divX.forEach(div => div.addEventListener('mouseover', () => {
