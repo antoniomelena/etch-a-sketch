@@ -58,26 +58,32 @@ function resetPage(){
 
 resetButton.addEventListener('click', resetPage);
 
-greyButton.addEventListener('click', function(){
+greyButton.addEventListener("click", function () {
    const divX = container.querySelectorAll(".square");
-   divX.forEach(div => div.addEventListener('mouseover', () => {
-      div.style.backgroundColor = `rgb(169, 169, 169)`;
-   }));
-})
+   divX.forEach((div) =>
+      div.addEventListener("mouseover", () => {
+         div.style.backgroundColor = `rgb(169, 169, 169)`;
+      })
+   );
+});
 
-blackButton.addEventListener('click', function(){
+blackButton.addEventListener("click", function () {
    const divX = container.querySelectorAll(".square");
-   divX.forEach(div => div.addEventListener('mouseover', () => {
-      div.style.backgroundColor = `rgb(0, 0, 0)`
-   }));
-})
+   divX.forEach((div) =>
+      div.addEventListener("mouseover", () => {
+         div.style.backgroundColor = `rgb(0, 0, 0)`;
+      })
+   );
+});
 
-rainbowButton.addEventListener('click', function () {
+rainbowButton.addEventListener("click", function () {
    const divX = container.querySelectorAll(".square");
-   divX.forEach(div => div.addEventListener('mouseover', () => {
-      let numberR = Math.floor(Math.random() * 256);
-      let numberG = Math.floor(Math.random() * 256);
-      let numberB = Math.floor(Math.random() * 256);
-      div.style.backgroundColor = `rgb(${numberR}, ${numberG}, ${numberB})`
-   }));
-})
+   divX.forEach((div) =>
+      div.addEventListener("mouseover", () => {
+         let numberR = Math.floor(Math.random() * 256);
+         let numberG = Math.floor(Math.random() * 256);
+         let numberB = Math.floor(Math.random() * 256);
+         div.style.backgroundColor = `rgb(${numberR}, ${numberG}, ${numberB})`;
+      })
+   );
+});
