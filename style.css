@@ -1,5 +1,12 @@
+body {
+   background-image: url(jelly.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
 h1 {
    font-family: Brush Script MT, Brush Script Std, cursive;
+   font-size: 36px;
    text-align: center;
    color: goldenrod;
 }
@@ -7,7 +14,7 @@ h1 {
 .container {
    height: 80vh;
    width: 80vh;
-   border: 10px solid rgb(202, 26, 26);
+   border: 2px double #fff;
    border-radius: 1px;
    display: grid;
    margin: auto;
@@ -28,6 +35,6 @@ h1 {
 }
 
 .square{
-   background-color: rgb(255, 255, 255);
-   border: 1px solid rgba(50, 50, 50, 0.75);
+   background-color: rgba(255, 255, 255, 0.25);
+   border: 1px solid rgba(50, 50, 50, 0.95);
 }
